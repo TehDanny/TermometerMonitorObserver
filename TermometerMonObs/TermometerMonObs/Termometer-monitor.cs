@@ -15,6 +15,8 @@ namespace TermometerMonObs
         public int MaxAlarm { get; set; }
         delegate int MinAlarmDelegate(int temp);
         delegate int MaxAlarmDelegate(int temp);
+        private const int minAlarmValue = 0;
+        private const int maxAlarmValue = 100;
 
         public int GetCurrentTemp()
         {
@@ -46,6 +48,26 @@ namespace TermometerMonObs
         {
             MinTemp = CurrentTemp;
             MaxTemp = CurrentTemp;
+        }
+
+        public bool CheckMinAlarm(int temp)
+        {
+            bool isBelowMin = false;
+
+            if (temp < minAlarmValue)
+                isBelowMin = true;
+
+            return isBelowMin;
+        }
+
+        public bool CheckMaxAlarm(int temp)
+        {
+            bool isAboveMax = false;
+
+            if (temp > maxAlarmValue)
+                isAboveMax = true;
+
+            return isAboveMax;
         }
     }
 }
