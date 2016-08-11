@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel HorizontalAlignment="Left" Height="63" Margin="295,101,0,0" VerticalAlignment="Top" Width="165">
+            <Label x:Name="label" Content="Subscribe to minimum alarm"/>
+            <RadioButton x:Name="radioButton" Content="Yes"/>
+            <RadioButton x:Name="radioButton1" Content="No"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="68" Margin="295,164,0,0" VerticalAlignment="Top" Width="165">
+            <Label x:Name="label1" Content="Subscribe to maximum alarm"/>
+            <RadioButton x:Name="radioButton2" Content="Yes"/>
+            <RadioButton x:Name="radioButton3" Content="No"/>
+        </StackPanel>
     </Grid>
 </Window>
